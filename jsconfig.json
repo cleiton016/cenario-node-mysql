@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "target": "es2017",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "@app/*": [
+                "src/*"
+            ],
+            "@config/*": [
+                "src/config/*"
+            ],
+            "@controller/*": [
+                "src/controller/*"
+            ],
+            "@includes/*": [
+                "src/includes/*"
+            ],
+            "@models/*": [
+                "src/models/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+}

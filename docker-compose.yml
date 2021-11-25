@@ -1,0 +1,25 @@
+version: "3"
+services:
+  node:
+    image: "node:16.13.0"
+    user: "node"
+    environment:
+      - NODE_ENV=dev
+      - MYSQL_USER=root
+      - MYSQL_PASS=password
+    volumes:
+      - ".:/opt/work"
+    expose:
+      - "3000"
+    command: "npm start"
+    #camada de persistência de dados
+  mysql:
+    image: mysql:5.7.20
+    volumes:
+      - ".:/opt/work"
+      #- "./mysql/initial_data:docker_entrypoint-initdb.d"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=password

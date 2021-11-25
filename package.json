@@ -1,0 +1,27 @@
+{
+  "name": "sql_injection",
+  "version": "1.0.0",
+  "description": "Projeto para demontração de injeção de SQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "dotenv": "^7.0.0",
+    "module-alias": "^2.2.0",
+    "nodemon": "^2.0.14"
+  },
+  "_moduleAliases": {
+    "@": "src",
+    "@app": "src/app.js",
+    "@config": "src/config",
+    "@controller": "src/controller",
+    "@includes": "src/includes",
+    "@models": "src/models"
+  }
+}
